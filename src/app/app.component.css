@@ -16,7 +16,7 @@ table a:hover {
 table {
 	font-family:Arial, Helvetica, sans-serif;
 	color:#666;
-	font-size:12px;
+	font-size:14px;
 	text-shadow: 1px 1px 0px #fff;
 	background:#eaebec;
 	margin:20px;
@@ -106,6 +106,7 @@ table tr:hover td {
   background: #b3d5eb;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
+  width: 100px;
 }
 
 .btn:hover {
@@ -114,11 +115,12 @@ table tr:hover td {
 }
 
 input[type="text"] {
-  padding: 3px;
-  border: none;
-  width: 150px;
-  border-bottom: solid 2px #c9c9c9;
+  border: solid 2px #c9c9c9;
+  padding: 5px;
+  margin-left: 5px;
+  border-radius: 5px;
   transition: border 0.3s;
+  width: 275px
 }
 input[type="text"]:focus,
 input[type="text"].focus {
@@ -126,12 +128,24 @@ input[type="text"].focus {
 }
 
 #button-wrapper {
-  width: 50%;
+  width: 70%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 #title, #instructions, #form-wrapper{
   display: flex;
   justify-content: center;
+}
+.label-holder {
+  font-size: 19px;
+  font-weight: 600;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.sort-by {
+  font-size: 19px;
+  font-weight: 600;
+  margin-left: 20px;
 }
