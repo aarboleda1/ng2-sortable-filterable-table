@@ -1,5 +1,5 @@
 import { Component, OnInit, NgModule } from '@angular/core';
-import { httpService } from './http-service.service';
+import { HttpService } from './http-service.service';
 
 import { FilterPipe } from './pipes/filter.pipe';
 
@@ -7,7 +7,7 @@ import { FilterPipe } from './pipes/filter.pipe';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [httpService],
+  providers: [HttpService],
 })
 
 @NgModule({
@@ -16,19 +16,19 @@ import { FilterPipe } from './pipes/filter.pipe';
         FilterPipe,
     ],
     bootstrap: [],
-    providers: [httpService]
+    providers: [HttpService]
 })
 
 export class AppComponent {
   title = 'Comment Table';
-  instructions = 'Welcome to this Filterable Table!';
+  instructions = 'Filter through any text in the table and sort by any column name!';
   public data:Array<any>;
   public dataCopy: Array<any>;
   public keys:Array<any>;
   public numItems:number;
 
   
-  constructor (private httpService: httpService) {
+  constructor (private httpService: HttpService) {
    }
   ngOnInit() {
     //http call to get comment service

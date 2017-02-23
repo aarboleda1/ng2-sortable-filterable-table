@@ -8,7 +8,7 @@ import 'rxjs/add/operator/catch';
 
 
 @Injectable()
-export class httpService {
+export class HttpService {
   // using a jsonplaceholder to fill table and test properly
   private baseURL: string = 'https://jsonplaceholder.typicode.com/comments'
   constructor(private http: Http) { }

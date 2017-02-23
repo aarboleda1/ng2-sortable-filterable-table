@@ -4,7 +4,6 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'filter'
 })
 export class FilterPipe implements PipeTransform {
-
   transform(comments: any, input: any): any {
     // if no searchInput, return all comments
     if (input === undefined) {
@@ -13,7 +12,7 @@ export class FilterPipe implements PipeTransform {
     if (input.length === 0) {
       return comments;
     };
-    if ( typeof comments === undefined) {
+    if (typeof comments === undefined) {
       return;
     }
 
@@ -23,7 +22,7 @@ export class FilterPipe implements PipeTransform {
       })
     } else if (typeof input === 'string') {
       return comments.filter((comment) => {        
-        return comments = comment.email.toLowerCase().indexOf(input.toLowerCase()) >= 0 || 
+        return comment.email.toLowerCase().indexOf(input.toLowerCase()) >= 0 || 
         comment.body.toLowerCase().indexOf(input.toLowerCase()) >= 0 || 
         comment.name.toLowerCase().indexOf(input.toLowerCase()) >= 0;
       })
