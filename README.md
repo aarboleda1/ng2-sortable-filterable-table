@@ -1,5 +1,5 @@
 # MangoCodingChallenge
-
+![alt tag](https://github.com/aarboleda1/ng2-sortable-filterable-table/src/images/screenshot.png)
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
 
 ## Development server
