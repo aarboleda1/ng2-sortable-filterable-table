@@ -21,11 +21,16 @@ export class FilterPipe implements PipeTransform {
         return comment.id === Number(input);
       })
     } else if (typeof input === 'string') {
-      return comments.filter((comment) => {        
+      var filteredComments = comments.filter((comment) => {        
         return comment.email.toLowerCase().indexOf(input.toLowerCase()) >= 0 || 
         comment.body.toLowerCase().indexOf(input.toLowerCase()) >= 0 || 
         comment.name.toLowerCase().indexOf(input.toLowerCase()) >= 0;
-      })
+      });
+      
+      //Error handling for filtering, return not found in all rows if bad search 
+      var notFound = [{id: 'not found', name: 'not found', email: 'not found', body: 'not found'}]      
+      return filteredComments.length > 0 ? filteredComments : notFound;
+
     } else if (input.length > 0 && comments.length === 0) {
       console.log('hello world')
     }
