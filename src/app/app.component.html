@@ -2,19 +2,20 @@
   <h1 id="title">
     {{title}}
   </h1>
-  <h2 id="instructions">
+  <h3 id="instructions">
     {{instructions}}
-  </h2>
+  </h3>
+
+  <div id="button-wrapper">
+    <div class="sort-by">Sort By</div>
+    <button class="btn" (click)="sortById('id')" value="id">Id</button>
+    <button class="btn" (click)="sortByColumn('name')" value="name">Name</button>
+    <button class="btn" (click)="sortByColumn('email')" value="email">Email</button>
+    <button class="btn" (click)="sortByColumn('body')" value="body"> Body</button>
     <form id="form-wrapper">
-      <label>Search by id, email or any text in the body</label>
+      <label class="label-holder">Search Table</label>
       <input class="input-form" placeholder="Search" type = "text" [(ngModel)]="input" name="input">
     </form>
-  <div id="button-wrapper">
-    <button class="btn" (click)="sortById('id')" value="id">Sort By Id</button>
-    <button class="btn" (click)="sortByColumn('name')" value="name">Sort By Name</button>
-    <button class="btn" (click)="sortByColumn('email')" value="email">Sort By Email</button>
-    <button class="btn" (click)="sortByColumn('body')" value="body">Sort By Body</button>
-    
   </div>
   <table class="ng2-table">
     <thead>
